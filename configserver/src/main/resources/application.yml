@@ -2,20 +2,20 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active: native
-    #active: git
+    #active: native
+    active: git
   cloud:
     config:
       server:
-        #git:
-          #uri: "Git url here"
-          #default-label: branch name here
-          #timeout: 5 (Configserver will wait only for 5 seconds to connect to git, else it will throw exception)
-          #clone-on-start: true (Asking Configserver to clone the git to local in the start itself)
-          #force-pull: true (pulling the latest configs from the git)
-        native:
+        git:
+          uri: "https://github.com/Yesdani-Khan-Attar/eazybytes-config.git"
+          default-label: master
+          timeout: 5 #(Configserver will wait only for 5 seconds to connect to git, else it will throw exception)
+          clone-on-start: true #(Asking Configserver to clone the git to local in the start itself)
+          force-pull: true #(pulling the latest configs from the git)
+        #native:
           #search-locations: "classpath:/config" (when you have files inside resources/config)
-          search-locations: "file:///C://Users//yesda//Java_Full_Stack//Microservices//eazybytes//Documents//config"
+          #search-locations: "file:///C://Users//yesda//Java_Full_Stack//Microservices//eazybytes//Documents//config"
 
 server:
   port: 8071
