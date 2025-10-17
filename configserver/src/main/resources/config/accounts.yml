@@ -7,5 +7,5 @@ accounts:
     name: "Yesdani Khan - Developer"
     email: "khan@gmail.com"
   onCallSupport:
-    (555) 555-1234,
-    (555) 555-1345
+    - "(453) 392-4829"
+    - "(236) 203-0384"
