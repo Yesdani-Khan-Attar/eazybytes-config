@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related to QA API's"
+  contactDetails:
+    name: "Yesdani Khan - QA Lead"
+    email: "khan@gmail.com"
+  onCallSupport:
+    (666) 265-3765,
+    (666) 734-8371
