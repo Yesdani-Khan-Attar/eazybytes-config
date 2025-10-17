@@ -1,21 +1,41 @@
+#spring:
+#  application:
+#    name: "configserver"
+#  profiles:
+#    #active: native
+#    active: git
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: "https://github.com/Yesdani-Khan-Attar/eazybytes-config.git"
+#          default-label: master
+#          timeout: 5 #(Configserver will wait only for 5 seconds to connect to git, else it will throw exception)
+#          clone-on-start: true #(Asking Configserver to clone the git to local in the start itself)
+#          force-pull: true #(pulling the latest configs from the git)
+#        #native:
+#          #search-locations: "classpath:/config" (when you have files inside resources/config)
+#          #search-locations: "file:///C://Users//yesda//Java_Full_Stack//Microservices//eazybytes//Documents//config"
+
+
 spring:
   application:
     name: "configserver"
   profiles:
-    #active: native
+    # active: native
     active: git
   cloud:
     config:
       server:
+        # native:
+        # search-locations: "classpath:/config"
+        # search-locations: "file:///Users//eazybytes//Documents//config"
         git:
           uri: "https://github.com/Yesdani-Khan-Attar/eazybytes-config.git"
-          default-label: master
-          timeout: 5 #(Configserver will wait only for 5 seconds to connect to git, else it will throw exception)
-          clone-on-start: true #(Asking Configserver to clone the git to local in the start itself)
-          force-pull: true #(pulling the latest configs from the git)
-        #native:
-          #search-locations: "classpath:/config" (when you have files inside resources/config)
-          #search-locations: "file:///C://Users//yesda//Java_Full_Stack//Microservices//eazybytes//Documents//config"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
 
 server:
   port: 8071
